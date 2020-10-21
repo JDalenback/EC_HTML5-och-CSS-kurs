@@ -185,23 +185,27 @@ main{
 
 footer{
     width: 100%;
+    height:12rem;
     background-color:rgb(1, 53, 42);
     color: #fafafa;
     text-align: center;
-    padding:5rem;
-    /* border-top: 1px solid rgba(255,255,255,0.7); */
-
     position:sticky;
     bottom:0;
     left:0;
     display:grid;
-    place-items: center;
     z-index: 0;
 }
 
-footer p, a{
-    margin: auto;
+footer>p{
     font-size: 1.5rem;
+}
+
+#footer-container{
+    width: 50%;
+    margin:auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 ul{
@@ -211,6 +215,8 @@ ul{
     margin: auto;
     list-style-type: square;
 }
+
+
 /* SECTION DIVIDERS
 /* TOP divider effect between sections. */
 .custom-shape-divider-top-1603120758 {
