@@ -21,14 +21,15 @@ a:hover{
 
 a{
     text-decoration: none;
-    font-size: 1.6rem;
-    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem;
+    /* font-family: "Nunito", sans-serif; */
+    text-transform: uppercase;
     color: #fafafa;
     transition:0.4s;
 }
 
 p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 img{
@@ -46,6 +47,7 @@ section{
     padding: 16rem 0rem;
     width:100%;
     height:100%;
+    position:relative;
 }
 
 header{
@@ -79,6 +81,8 @@ header h1{
 
 header a{
     margin:auto;
+    font-size: 2rem;
+
 }
 
 .fab{
@@ -86,10 +90,18 @@ header a{
     margin: auto;
 }
 
-nav{
-    width:90%;
-    text-align: right;
+#header-nav{
+    display: flex;
+    width:100%;
     transform: translateY(-4rem);
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.links-container{
+    display: inherit;
+    width: 40%;
+    justify-content: space-evenly;
 }
 
 #about img{
@@ -102,16 +114,17 @@ nav{
 
 main h3{
     font-family: "Aldrich", sans-serif; 
-    font-size: 2rem; 
-    color: rgba(255,255,255,.8);  
+    font-size: 2.5rem; 
+    color: rgba(255,255,255,.8); 
+    text-transform: uppercase; 
 }
 
 main{
     position:relative;
     text-align: center;
     min-height:100vh;
-    padding-top: calc(var(--header-height));
-    color:rgba(255,255,255,0.7);
+    padding-top: var(--header-height);
+    color:rgba(255,255,255,0.8);
     z-index: 1;
 }
 
@@ -129,7 +142,7 @@ main{
         url(imgs/italy-1587287_1920.jpg);
     background-size: cover;
     background-attachment: fixed;
-    border-bottom:0.5rem solid rgba(255,255,255,0.2);
+    /* border-bottom:0.5rem solid rgba(255,255,255,0.2); */
 }
 
 #experience{
@@ -139,7 +152,7 @@ main{
         rgba(0, 0, 0, 0.7)), 
         url(imgs/tim-foster-V2HBmfto63E-unsplash.jpg);
     background-size: cover;
-    border-bottom:0.5rem solid rgba(255,255,255,0.2);
+    /* border-bottom:0.5rem solid rgba(255,255,255,0.2); */
 }
 
 #why-dev{
@@ -191,6 +204,94 @@ ul{
     margin: auto;
     list-style-type: square;
 }
+/* SECTION DIVIDERS
+/* TOP divider effect between sections. */
+.custom-shape-divider-top-1603120758 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1603120758 svg {
+    position: relative;
+    display: block;
+    width: calc(159% + 1.3px);
+    height: 31px;
+}
+
+.custom-shape-divider-top-1603120758 .shape-fill {
+    fill: #ffffff;
+}
+/* END TOP divider effect between sections. */
 
 
+/* BOTTOM divider effect between sections. */
+.custom-shape-divider-bottom-1603120723 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
+.custom-shape-divider-bottom-1603120723 svg {
+    position: relative;
+    display: block;
+    width: calc(159% + 1.3px);
+    height: 31px;
+}
+
+.custom-shape-divider-bottom-1603120723 .shape-fill {
+    fill: #ffffff;
+}
+/* END BOTTOM divider effect between sections. */
+
+/* TOP INVERTED divider effect for sections. */
+.custom-shape-divider-top-1603122028 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1603122028 svg {
+    position: relative;
+    display: block;
+    width: calc(159% + 1.3px);
+    height: 20px;
+}
+
+.custom-shape-divider-top-1603122028 .shape-fill {
+    fill: #ffffff;
+}
+/* END TOP INVERTED divider effect for sections. */
+
+/* BOTTOM INVERTED divider effect for sections. */
+.custom-shape-divider-bottom-1603122065 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1603122065 svg {
+    position: relative;
+    display: block;
+    width: calc(159% + 1.3px);
+    height: 20px;
+}
+
+.custom-shape-divider-bottom-1603122065 .shape-fill {
+    fill: #ffffff;
+}
+/* END BOTTOM INVERTED divider effect for sections. */

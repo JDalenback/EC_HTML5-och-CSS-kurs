@@ -9,8 +9,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="style.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="styleshet" >
+        <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet" >
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet" >
+
         <script src="https://kit.fontawesome.com/eec46c94e5.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -18,39 +19,76 @@
             <span class="fab fa-jira"></span>
             <h3>Johannes Dalenbäck</h3>
             <h1>Portfolio</h1>
-            <nav>
-                <div class="links">
+            <nav id="header-nav">
+                <div class="links-container">
+                    <div class="links">
                         <a href="portfolio.html">Portfolio</a>
+                    </div>
+                    <div class="links">
+                        <a href="#">Link</a>
+                    </div>
+                    <div class="links">
+                        <a href="#">Link</a>
+                    </div>
                 </div>
             </nav>
         </header>
 
         <main>
             <section id="about">
-            <div class="container">
-                
+                <div class="container">
                     <h3>About Me</h3>
-                    <img src="imgs/profile.JPG" alt="Johannes Dalenbäck">
+                    <img src="imgs/profile.JPG" alt="Johannes Dalenbäck" title="Johannes Dalenbäck">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam veniam labore eum deleniti minima eligendi quis provident nobis reprehenderit mollitia dolores nulla, earum ipsum! Quam tempore dolor a ipsum fugit?</p>    
                 </div>
+
+                <!-- Divider effect between sections. BOTTOM -->
+                <div class="custom-shape-divider-bottom-1603120723">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+                <!-- END Divider effect between sections. BOTTOM -->
             </section>
+
             <section id="experience">
+                <!-- Divider effect between sections. TOP -->
+                <div class="custom-shape-divider-top-1603120758">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+                 <!-- END Divider effect between sections. TOP -->
+
                 <div class="container">
                 
                     <h3>Experience</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate dolore amet ipsam omnis quisquam quia! Eos voluptatum vel nulla ratione. Repudiandae officiis quo necessitatibus eum labore quis eveniet quod!</p>
-            
                 </div>
+                <!-- Divider effect between sections. BOTTOM INVERTED -->
+                <div class="custom-shape-divider-bottom-1603122065">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                    </svg>
+                </div>
+                <!-- END Divider effect between sections. BOTTOM INVERTED -->
             </section>
+
             <section id="why-dev">
+            <!-- Divider effect between sections. TOP INVERTED -->
+            <div class="custom-shape-divider-top-1603122028">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <!-- END Divider effect between sections. TOP INVERTED -->
+
                 <div class="container">
-                
                     <h3>Why i want to be a developer</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt reprehenderit voluptas voluptatibus asperiores quo, modi, soluta debitis ipsum dignissimos, iure incidunt sint dicta fugit ipsam iste optio pariatur? Excepturi, reiciendis?</p>
                 </div>
             </section>
         </main>
-
 
         <footer>
             <a href="#top">Go to Top</a>
