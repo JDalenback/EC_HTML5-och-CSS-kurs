@@ -1,0 +1,311 @@
+:root{
+    --page-width: 90%;
+    --header-height: 8vh;
+    --hamburger-icon-size: 40px;
+    --background-color: #f7f1e3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+    color: rgba(0,0,0,0.8);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+body{
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page-container{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    width: var(--page-width);
+    height: 100%;
+    min-height: 100%;
+
+    /* grid-template-areas:
+    "header"
+    "main"
+    "footer";
+
+    width: var(--page-width);
+    height: 100%;
+    overflow: hidden; */
+}
+
+header{
+    position: fixed;
+    width: var(--page-width);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 0px;
+    background-color: var(--background-color);
+    z-index: 100;
+}
+
+#brand{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+#brand-name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#brand-name a{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+
+.navbar{
+    position: sticky;
+    background-color: var(--background-color);
+    top: calc(var(--header-height) + 20px);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    padding: 35px;
+    z-index: 2;
+}
+
+#navbar-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    list-style: none;
+    font-weight: bold;
+}
+
+#navbar-links a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: rgba(0,0,0,0.7);
+    transition: .5s;
+    padding:10px;
+}
+#navbar-links a:hover{
+    color: rgb(0,0,0);
+    background-color: rgba(211,211,211,0.5);
+}
+
+
+.menu-btn{
+    visibility: hidden;
+    position: absolute;
+    right: calc(var(--hamburger-icon-size)/2);
+    top: calc(var(--header-height) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:var(--hamburger-icon-size);
+    height:var(--hamburger-icon-size);
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline:none;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-hamburger{
+    display:flex;
+    position:absolute;
+    bottom: calc(var(--hamburger-icon-size)/2);
+    width:calc(var(--hamburger-icon-size) * 0.7);
+    height:calc(var(--hamburger-icon-size) * 0.1);
+    background-color: rgba(0,0,0,0.8);
+    transition: .5s;
+    border-radius: 5px;
+    /* Add box shadow for nice effect. Not good for perfomance! */
+}
+
+.menu-btn-hamburger::before,
+.menu-btn-hamburger::after{
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0,0,0,0.8);
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.menu-btn-hamburger::before{
+    transform: translatey(-250%);
+}
+
+.menu-btn-hamburger::after{
+    transform: translatey(250%);
+}
+
+ main{
+    width:100%;
+    position: relative;
+    top: calc(var(--header-height) + 6vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+#news{
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.news-item{
+    display: flex;
+    justify-content: center;  
+    width: 100%;
+    min-width: 400px;
+    height: 50vh;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.news-item h2{
+    text-align: center;
+    color: rgba(0,0,0,0.8);
+    padding: 20px 0px;
+}
+
+.news-item p{
+    padding: 0px 18%;
+}
+
+.news-item a{
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: rgba(0,0,0,0.7);
+    transition: .5s;
+    padding:10px;  
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 20px;
+}
+.news-item a:hover{
+    color: rgb(0,0,0);
+    background-color: rgba(211,211,211,0.5);
+}
+
+
+
+#news-standard,
+#news-border,
+#news-grey,
+#news-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+#news-border{
+    border: 1px solid black;
+}
+
+#news-grey{
+    background: linear-gradient(var(--background-color), rgb(216, 209, 193));
+}
+
+#news-img{
+    background: linear-gradient(
+        to bottom right,
+        #f7f1e3,
+        rgba(0, 0, 0, 0.7)), 
+        url(../imgs/tim-foster-V2HBmfto63E-unsplash.jpg);
+    background-size: cover;
+}
+
+
+footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: 50vh;
+    bottom: 0px;
+} 
+
+footer ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+/* HAMBURGER MENU ANIMATION */
+.menu-btn.open .menu-btn-hamburger::before,
+.menu-btn.open .menu-btn-hamburger::after{
+    transform: translateY(0%);
+    background-color: transparent;
+}
+
+
+
+
+
+
+@media screen and (max-width: 680px){
+    :root{
+        --page-width: 100%;
+    }
+
+    #brand-name{
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .menu-btn{
+        visibility: visible;
+    }
+
+    .navbar{
+        transform: translateY(-100%);
+        font-size: 15px;
+        letter-spacing: 1px;
+        padding: 35px 5px;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .navbar.open{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    main{
+        top: var(--header-height);
+    }
+}
