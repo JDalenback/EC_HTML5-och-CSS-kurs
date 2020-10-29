@@ -12,12 +12,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-h1{
-    color: rgba(0,0,0,0.8);
-    text-align: center;
-    padding-bottom: 20px;
-}
-
 body{
     background: var(--background-color);
     display: flex;
@@ -32,15 +26,6 @@ body{
     width: var(--page-width);
     height: 100%;
     min-height: 100%;
-
-    /* grid-template-areas:
-    "header"
-    "main"
-    "footer";
-
-    width: var(--page-width);
-    height: 100%;
-    overflow: hidden; */
 }
 
 header{
@@ -173,11 +158,138 @@ header{
     align-items: center; 
 }
 
+.presentation{
+    display: flex;
+    justify-content: center;  
+    width: 100%;
+    min-width: 400px;
+    height: auto;
+    padding: 20px 0px;
+    margin: 10vh 0px;
+    text-align: left;
+}
+
+.presentation h1{
+    color: rgba(0,0,0,0.6);
+    font-size: 80px;
+    padding-right: 20px;
+}
+
+.presentation .presentation-info{
+    width: 25%;
+    padding-left: 20px;
+}
+
+.presentation p{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(0,0,0,.3);
+    background-color:  rgba(212, 207, 194, 0.2);
+    padding : 0px 20px;
+    width: 100%;
+    height:100%;
+}
+
+#contact{
+    display: flex;
+    justify-content: center;  
+    width: 100%;
+    min-width: 400px;
+    height: auto;
+    padding: 20px 0px;
+    margin: 10vh 0px 25vh;
+    text-align: left;
+}
+
+#contact h1{
+    color: rgba(0,0,0,0.6);
+    font-size: 80px;
+    padding-right: 10%;
+}
+
+#contact p{
+    border: 2px solid rgba(0,0,0,.3);
+    background-color:  rgba(212, 207, 194, 0.2);
+    padding : 20px;
+    width: 100%;
+    height:100%;
+}
+
+#contact-info{
+    font-size: 20px;
+    color: rgba(0,0,0,0.8);
+    letter-spacing: 2px;
+}
+
+#contact-info form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+}
+
+#contact-info #submit{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.06); 
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#contact-info input{
+    margin-bottom: 10px;
+}
+
+#contact-info textarea{
+    resize:none;
+    width: 300%;
+}
+
+.projects-gallery{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.projects-item img{ 
+    max-width: 80%;
+    max-height: 80%;
+    margin: 20px 0px 20px 0px;
+    border: 2px solid rgba(0,0,0,.8);
+    border-radius: 5px;
+
+}
+.projects-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    border: 1px solid rgba(0,0,0,.5);
+    background: linear-gradient(rgba(247,241,227,.8),
+    rgba(219, 211, 192, 0.8));
+    border-radius: 5px;
+    margin: 20px 20px;
+}
+
+.news-item p{
+    width: 100%;
+    text-align: center;
+    padding: 20px
+}
+
+
 #news{
     width: 100%;
     display: flex; 
     align-items: center;
     flex-direction: column;
+    /* margin-top: 10%; */
 }
 
 .news-item{
@@ -211,18 +323,43 @@ header{
     text-transform: uppercase;
     font-weight: bold;
     width: 20px;
+    margin: 0px 20px;
 }
 .news-item a:hover{
     color: rgb(0,0,0);
-    background-color: rgba(211,211,211,0.5);
+}
+
+#bjurman:hover + .vertical-line{
+    opacity:1;
+}
+
+#bjurman-spotify:hover + .vertical-line{
+    opacity:1;
 }
 
 
+.vertical-line{
+    background-color: rgba(211,211,211,0.5);
+    height: 100%;
+    width: 20px;
+    /* Maybe generate random number on every hover for the transform? */
+    transform: translateX(-50px); 
+    opacity: 0;
+    transition: .5s;
+}
 
-#news-standard,
-#news-border,
-#news-grey,
-#news-img{
+.news-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.news-standard,
+.news-border,
+.news-grey,
+.news-img{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -231,23 +368,26 @@ header{
 }
 
 
-#news-border{
+
+.news-border{
     border: 1px solid black;
 }
 
-#news-grey{
+.news-grey{
     background: linear-gradient(var(--background-color), rgb(216, 209, 193));
+    border: 1px solid black;
 }
 
-#news-img{
+.news-img{
     background: linear-gradient(
         to bottom right,
-        #f7f1e3,
-        rgba(0, 0, 0, 0.7)), 
+        rgba(247,241,227,.94),
+        rgba(247,241,227,.94)), 
         url(../imgs/tim-foster-V2HBmfto63E-unsplash.jpg);
     background-size: cover;
+    height: 50vh;
+    
 }
-
 
 footer{
     position: relative;
@@ -256,6 +396,14 @@ footer{
     width:100%;
     height: 50vh;
     bottom: 0px;
+    font-size: 18px;
+    color: rgba(0,0,0,0.7);
+    background: linear-gradient(
+        rgba(247,241,227,.92),
+        rgba(247,241,227,.92)),
+        url(../imgs/braden-collum-LDh4LAV2Duc-unsplash.jpg);
+    background-size: cover;
+    margin-top: 10%;
 } 
 
 footer ul{
@@ -263,7 +411,37 @@ footer ul{
     display: flex;
     width: 100%;
     justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
 }
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 100%;
+    opacity: 0.7;
+    transition: .5s;
+  }
+
+  .fa:hover{
+    opacity: 1;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-linkedin{
+    background: #007bb5;
+    color: white;
+  }
 
 
 /* HAMBURGER MENU ANIMATION */
@@ -307,5 +485,42 @@ footer ul{
 
     main{
         top: var(--header-height);
+    }
+
+    .presentation{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presentation h1{
+        font-size: 60px;
+        padding: 0px;
+    }
+
+    .presentation-info{
+        width: 60%;
+        padding: 0px;
+    }
+
+    #contact{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact textarea{
+        width: auto;
+    }
+
+    #contact h1{
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 0px;
+    }
+
+    footer ul{
+        height: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
     }
 }

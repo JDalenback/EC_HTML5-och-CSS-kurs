@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valley Creek Productions</title>
+    <meta name="description" content="Music production and full stack development.">
+    <meta name="keywords" content="Music, music production, web, full stack, back end, html, css">
+    <meta name="author" content="Johannes Dalenbäck">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- STYLE -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <div id="page-container">
+        <header>
+            <div id="brand">
+                <!-- Add logo here. -->
+                <nav id="brand-name">
+                    <a href="index.html">
+                        <h4>Johannes Dalenbäck</h4>
+                    </a>
+                </nav>
+            </div>
+            <nav id="menu-button">
+                <button class="menu-btn" type="button">
+                    <div class="menu-btn-hamburger">
+                    </div>
+                </button>
+            </nav>
+        </header>
+        <nav class="navbar">
+            <ul id="navbar-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../htmldocs/about.html">About</a></li>
+                <li><a href="../htmldocs/projects.html">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <main>
+            <section id="contact">
+                <h1>Get<br>in<br>touch</h1>
+                    <div id="contact-info">
+                        <form action="mailto:info@johannesdalenback.com" method="POST">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" name="first-name" id="first-name" maxlength="20" size="20" required>
+                           
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" name="last-name" id="last-name" maxlength="20" size="20" required>
+                           
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" maxlength="20" size="20" required>
+                           
+                            <label for="usr-message">Message:</label>
+                            <textarea name="usr-message" id="usr-message"  cols="20" rows="10" required></textarea>
+                           
+                            <input type="submit"  value="Send Message" id="submit">
+                        </form>
+                    </div>
+            </section>
+                
+        </main>
+        <footer>
+            <ul id="contact-footer">
+                <li> Hittepågatan 1 Malmö, 217 XX </li>
+                <li> 0709 XXXXXX </li>
+                <li><a class="fa fa-linkedin" href="https://www.linkedin.com/in/johannes-dalenb%C3%A4ck-69a0a969/?originalSubdomain=se" target="_blank"></a></li>
+                <li><a class="fa fa-facebook" href="https://www.facebook.com/johannes.dalenback/" target="_blank"></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
