@@ -3,6 +3,7 @@
     --header-height: 8vh;
     --hamburger-icon-size: 40px;
     --background-color: #f7f1e3;
+    --divider-size: 25vh;
 }
 
 *{
@@ -26,6 +27,7 @@ body{
     width: var(--page-width);
     height: 100%;
     min-height: 100%;
+    overflow-x: hidden;
 }
 
 header{
@@ -39,6 +41,7 @@ header{
     padding: 50px 0px;
     background-color: var(--background-color);
     z-index: 100;
+    border-bottom: 1px solid black;
 }
 
 #brand{
@@ -46,7 +49,7 @@ header{
     width: 100%;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 }
 
 #brand-name{
@@ -91,8 +94,8 @@ header{
     text-decoration: none;
     letter-spacing: 3px;
     color: rgba(0,0,0,0.7);
-    transition: .5s;
-    padding:10px;
+    transition: .3s;
+    padding:0px 10px;
 }
 #navbar-links a:hover{
     color: rgb(0,0,0);
@@ -162,11 +165,11 @@ header{
     display: flex;
     justify-content: center;  
     width: 100%;
-    min-width: 400px;
+    min-width: 1000px;
     height: auto;
     padding: 20px 0px;
     margin: 10vh 0px;
-    text-align: left;
+    text-align: center;
 }
 
 .presentation h1{
@@ -187,7 +190,20 @@ header{
     background-color:  rgba(212, 207, 194, 0.2);
     padding : 0px 20px;
     width: 100%;
-    height:100%;
+    height: 100%;
+}
+
+.profile-img{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    transform: translateY(-30%);
+
+}
+
+.profile-img img{
+    max-width: 300px;
+    border-radius: 100%;  
 }
 
 #contact{
@@ -246,7 +262,8 @@ header{
 
 #contact-info textarea{
     resize:none;
-    width: 300%;
+    width: auto;
+    padding: 10px;
 }
 
 .projects-gallery{
@@ -267,14 +284,54 @@ header{
 .projects-item{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     width: 400px;
+    height: auto;
     border: 1px solid rgba(0,0,0,.5);
     background: linear-gradient(rgba(247,241,227,.8),
     rgba(219, 211, 192, 0.8));
     border-radius: 5px;
     margin: 20px 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.projects-item img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    /* object-position: top; */
+}
+
+.projects-item.mimu img{
+    background: linear-gradient(
+        to bottom right,
+        rgba(247,241,227,.9),
+        rgba(247,241,227,.9)), 
+        url(../imgs/projects/MiMu/namroud-gorguis-FZWivbri0Xk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    object-position: top;
+    padding-top: 40px;
+}
+
+
+#projects a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: rgba(0,0,0,0.8);
+    transition: .3s;
+    padding:20px 10px;
+}
+#projects a:hover{
+    color: rgb(0,0,0);
+    background-color: rgba(167, 165, 165, 0.5);
 }
 
 .news-item p{
@@ -297,8 +354,8 @@ header{
     justify-content: center;  
     width: 100%;
     min-width: 400px;
-    height: 50vh;
-    padding: 20px 0px;
+    height: auto;
+    min-height: 50vh;
     flex-wrap: wrap;
     text-align: left;
 }
@@ -343,9 +400,15 @@ header{
     height: 100%;
     width: 20px;
     /* Maybe generate random number on every hover for the transform? */
-    transform: translateX(-50px); 
+    transform: translateX(-650%); 
     opacity: 0;
     transition: .5s;
+}
+
+.horisontal-line{
+    width: calc(var(--divider-size) * 3);
+    background-color: black;
+    height: 1px;
 }
 
 .news-links{
@@ -358,35 +421,63 @@ header{
 
 .news-standard,
 .news-border,
-.news-grey,
 .news-img{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     font-size: 16px;
+
 }
-
-
 
 .news-border{
     border: 1px solid black;
 }
 
 .news-grey{
-    background: linear-gradient(var(--background-color), rgb(216, 209, 193));
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    font-size: 16px;
+    background: linear-gradient(var(--background-color), rgba(230, 222, 204, 0.2));
+    border-top: 1px solid rgba(0,0,0,0.3);
+    border-bottom: 1px solid black;
+    padding-bottom: 25px;
 }
 
 .news-img{
     background: linear-gradient(
         to bottom right,
-        rgba(247,241,227,.94),
-        rgba(247,241,227,.94)), 
-        url(../imgs/tim-foster-V2HBmfto63E-unsplash.jpg);
+        rgba(247,241,227,.9),
+        rgba(247,241,227,.9)), 
+        url(../imgs/italy-1587287_1920.jpg);
     background-size: cover;
-    height: 50vh;
-    
+    background-attachment: fixed;
+    border: 1px solid rgba(0,0,0,0.5);
+    /* height: 50vh; */
+}
+
+.news-divider{
+    background-color: black;
+    height: var(--divider-size);
+    width: 1px;
+}
+
+.news-divider-fade-in{
+    background: linear-gradient(var(--background-color), black);
+    height: var(--divider-size);
+    width: 1px;
+}
+
+.news-divider-fade-out{
+    background: linear-gradient(black, var(--background-color));
+    height: var(--divider-size);
+    width: 1px;
+}
+
+.news-divider-empty{
+    height: var(--divider-size);
 }
 
 footer{
@@ -461,6 +552,10 @@ footer ul{
         --page-width: 100%;
     }
 
+    #page-container{
+        overflow-x: hidden;
+    }
+
     #brand-name{
         font-size: 18px;
         letter-spacing: 1px;
@@ -470,6 +565,8 @@ footer ul{
     }
 
     .navbar{
+        position: fixed;
+        height: var(--header-height);
         transform: translateY(-100%);
         font-size: 15px;
         letter-spacing: 1px;
@@ -498,10 +595,13 @@ footer ul{
     }
 
     .presentation-info{
-        width: 60%;
-        padding: 0px;
+        margin-top: 20px;
+        word-wrap: normal;
     }
 
+    .news-grey{
+        width: 90%;
+    }
     #contact{
         flex-direction: column;
         align-items: center;
@@ -514,7 +614,7 @@ footer ul{
     #contact h1{
         text-align: center;
         margin-bottom: 40px;
-        padding: 0px;
+        /* padding: 0px; */
     }
 
     footer ul{
