@@ -629,7 +629,7 @@ footer ul{
 @media screen and (max-width: 896px) and (orientation: landscape){
     :root{
         --projects-img-size: 200px;
-        --header-height: 10vh;
+        --header-height: 4.5vh;
     }
 
     .menu-btn{
