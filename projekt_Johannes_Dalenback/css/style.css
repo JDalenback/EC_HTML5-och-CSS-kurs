@@ -352,6 +352,12 @@ header{
     /* margin-top: 10%; */
 }
 
+#news h2{
+    color: rgba(0,0,0,0.6);
+    padding: 25vh 0px 0px;
+    font-size: 40px;
+}
+
 .news-item{
     display: flex;
     justify-content: center;  
@@ -363,14 +369,19 @@ header{
     text-align: left;
 }
 
-.news-item h2{
+.news-item h3{
     text-align: center;
     color: rgba(0,0,0,0.8);
     padding: 20px 0px;
+    font-size: 25px;
 }
 
 .news-item p{
     padding: 0px 18%;
+}
+
+.news-item ul{
+    padding-top: 20px;
 }
 
 .news-item a{
@@ -378,23 +389,20 @@ header{
     text-decoration: none;
     letter-spacing: 2px;
     color: rgba(0,0,0,0.7);
-    transition: .5s;
-    padding:10px;  
+    transition: .5s; 
     text-transform: uppercase;
     font-weight: bold;
     width: 20px;
-    margin: 0px 20px;
+    margin: 20px;
 }
+
 .news-item a:hover{
     color: rgb(0,0,0);
 }
 
-#bjurman:hover + .vertical-line{
-    opacity:1;
-}
-
-#bjurman-spotify:hover + .vertical-line{
-    opacity:1;
+.news-item a:hover{
+    color: rgb(0,0,0);
+    background-color: rgba(211,211,211,0.5);
 }
 
 
@@ -452,8 +460,8 @@ header{
 .news-img{
     background: linear-gradient(
         to bottom right,
-        rgba(247,241,227,.9),
-        rgba(247,241,227,.9)), 
+        rgba(247,241,227,0.9),
+        rgba(247,241,227,0.9)), 
         url(../imgs/italy-1587287_1920.jpg);
     background-size: cover;
     background-attachment: fixed;

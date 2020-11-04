@@ -6,4 +6,4 @@ menuBtn.addEventListener("click", () => {
     navbar.classList.toggle("open");
 
 
-})
+});
