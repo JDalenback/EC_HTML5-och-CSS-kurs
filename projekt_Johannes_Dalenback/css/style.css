@@ -241,7 +241,6 @@ header{
 #contact-info form{
     display: flex;
     flex-direction: column;
-    align-items: left;
     width: 100%;
 }
 
@@ -285,7 +284,6 @@ header{
 .projects-item{
     display: flex;
     flex-direction: column;
-    justify-content: top;
     align-items: center;
     width: var(--projects-img-size);
     height: auto;
@@ -475,7 +473,7 @@ header{
     width: 1px;
 }
 
-.news-divider-fade-in{
+/* .news-divider-fade-in{
     background: linear-gradient(var(--background-color), black);
     height: var(--divider-size);
     width: 1px;
@@ -485,7 +483,7 @@ header{
     background: linear-gradient(black, var(--background-color));
     height: var(--divider-size);
     width: 1px;
-}
+} */
 
 .news-divider-empty{
     height: var(--divider-size);
